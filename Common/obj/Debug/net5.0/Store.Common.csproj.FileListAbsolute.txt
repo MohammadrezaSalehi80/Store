@@ -1,0 +1,12 @@
+D:\VisualStudio\StoreCleanArtitecure\Common\bin\Debug\net5.0\Store.Common.deps.json
+D:\VisualStudio\StoreCleanArtitecure\Common\bin\Debug\net5.0\Store.Common.dll
+D:\VisualStudio\StoreCleanArtitecure\Common\bin\Debug\net5.0\Store.Common.pdb
+D:\VisualStudio\StoreCleanArtitecure\Common\obj\Debug\net5.0\Store.Common.csproj.AssemblyReference.cache
+D:\VisualStudio\StoreCleanArtitecure\Common\obj\Debug\net5.0\Store.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\VisualStudio\StoreCleanArtitecure\Common\obj\Debug\net5.0\Store.Common.AssemblyInfoInputs.cache
+D:\VisualStudio\StoreCleanArtitecure\Common\obj\Debug\net5.0\Store.Common.AssemblyInfo.cs
+D:\VisualStudio\StoreCleanArtitecure\Common\obj\Debug\net5.0\Store.Common.csproj.CoreCompileInputs.cache
+D:\VisualStudio\StoreCleanArtitecure\Common\obj\Debug\net5.0\Store.Common.dll
+D:\VisualStudio\StoreCleanArtitecure\Common\obj\Debug\net5.0\refint\Store.Common.dll
+D:\VisualStudio\StoreCleanArtitecure\Common\obj\Debug\net5.0\Store.Common.pdb
+D:\VisualStudio\StoreCleanArtitecure\Common\obj\Debug\net5.0\ref\Store.Common.dll

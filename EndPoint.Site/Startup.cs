@@ -1,9 +1,12 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Store.Application.Interfaces.Context;
+using Store.Persistance.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +26,9 @@ namespace EndPoint.Site
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IDataBaseContext, DatabaseContext>();
+            services.AddDbContext<DatabaseContext>(op =>
+                op.UseSqlServer(Configuration["Data:Store"]));
             services.AddControllersWithViews();
         }
 
@@ -47,10 +53,14 @@ namespace EndPoint.Site
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
-            {
+                {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                endpoints.MapControllerRoute(
+                name: "areas",
+                pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
