@@ -1,0 +1,15 @@
+D:\VisualStudio\StoreCleanArtitecure\Application\bin\Debug\net5.0\Store.Application.deps.json
+D:\VisualStudio\StoreCleanArtitecure\Application\bin\Debug\net5.0\Store.Application.dll
+D:\VisualStudio\StoreCleanArtitecure\Application\bin\Debug\net5.0\Store.Application.pdb
+D:\VisualStudio\StoreCleanArtitecure\Application\bin\Debug\net5.0\Store.Domain.dll
+D:\VisualStudio\StoreCleanArtitecure\Application\bin\Debug\net5.0\Store.Domain.pdb
+D:\VisualStudio\StoreCleanArtitecure\Application\obj\Debug\net5.0\Store.Application.csproj.AssemblyReference.cache
+D:\VisualStudio\StoreCleanArtitecure\Application\obj\Debug\net5.0\Store.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\VisualStudio\StoreCleanArtitecure\Application\obj\Debug\net5.0\Store.Application.AssemblyInfoInputs.cache
+D:\VisualStudio\StoreCleanArtitecure\Application\obj\Debug\net5.0\Store.Application.AssemblyInfo.cs
+D:\VisualStudio\StoreCleanArtitecure\Application\obj\Debug\net5.0\Store.Application.csproj.CoreCompileInputs.cache
+D:\VisualStudio\StoreCleanArtitecure\Application\obj\Debug\net5.0\Store.Application.csproj.CopyComplete
+D:\VisualStudio\StoreCleanArtitecure\Application\obj\Debug\net5.0\Store.Application.dll
+D:\VisualStudio\StoreCleanArtitecure\Application\obj\Debug\net5.0\refint\Store.Application.dll
+D:\VisualStudio\StoreCleanArtitecure\Application\obj\Debug\net5.0\Store.Application.pdb
+D:\VisualStudio\StoreCleanArtitecure\Application\obj\Debug\net5.0\ref\Store.Application.dll
