@@ -2314,6 +2314,7 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.17",
+          "Store.Common": "1.0.0",
           "Store.Domain": "1.0.0"
         },
         "compile": {
@@ -2321,6 +2322,16 @@
         },
         "runtime": {
           "bin/placeholder/Store.Application.dll": {}
+        }
+      },
+      "Store.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Store.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Store.Common.dll": {}
         }
       },
       "Store.Domain/1.0.0": {
@@ -7457,6 +7468,11 @@
       "type": "project",
       "path": "../Application/Store.Application.csproj",
       "msbuildProject": "../Application/Store.Application.csproj"
+    },
+    "Store.Common/1.0.0": {
+      "type": "project",
+      "path": "../Common/Store.Common.csproj",
+      "msbuildProject": "../Common/Store.Common.csproj"
     },
     "Store.Domain/1.0.0": {
       "type": "project",

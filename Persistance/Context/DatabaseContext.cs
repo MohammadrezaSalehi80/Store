@@ -19,5 +19,13 @@ namespace Store.Persistance.Context
         public DbSet<Roles> Roles { get; set; }
         public DbSet<UserRoles> UserRoles { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Roles>().HasData
+                (new Roles() { Id = 1, Name = "Admin" },
+                new Roles() { Id = 2, Name = "Operator" },
+                new Roles() { Id = 3, Name = "Customer" }
+                );
+        }
     }
 }

@@ -18,3 +18,5 @@ D:\VisualStudio\StoreCleanArtitecure\Persistance\obj\Debug\net5.0\Store.Persista
 D:\VisualStudio\StoreCleanArtitecure\Persistance\obj\Debug\net5.0\ref\Store.Persistance.dll
 D:\VisualStudio\StoreCleanArtitecure\Persistance\bin\Debug\net5.0\Store.Application.dll
 D:\VisualStudio\StoreCleanArtitecure\Persistance\bin\Debug\net5.0\Store.Application.pdb
+D:\VisualStudio\StoreCleanArtitecure\Persistance\bin\Debug\net5.0\Store.Common.dll
+D:\VisualStudio\StoreCleanArtitecure\Persistance\bin\Debug\net5.0\Store.Common.pdb

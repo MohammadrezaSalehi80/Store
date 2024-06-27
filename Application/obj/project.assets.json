@@ -213,6 +213,16 @@
           }
         }
       },
+      "Store.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Store.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Store.Common.dll": {}
+        }
+      },
       "Store.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -582,6 +592,11 @@
         "version.txt"
       ]
     },
+    "Store.Common/1.0.0": {
+      "type": "project",
+      "path": "../Common/Store.Common.csproj",
+      "msbuildProject": "../Common/Store.Common.csproj"
+    },
     "Store.Domain/1.0.0": {
       "type": "project",
       "path": "../Domain/Store.Domain.csproj",
@@ -591,6 +606,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "Microsoft.EntityFrameworkCore >= 5.0.17",
+      "Store.Common >= 1.0.0",
       "Store.Domain >= 1.0.0"
     ]
   },
@@ -627,6 +643,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "D:\\VisualStudio\\StoreCleanArtitecure\\Common\\Store.Common.csproj": {
+              "projectPath": "D:\\VisualStudio\\StoreCleanArtitecure\\Common\\Store.Common.csproj"
+            },
             "D:\\VisualStudio\\StoreCleanArtitecure\\Domain\\Store.Domain.csproj": {
               "projectPath": "D:\\VisualStudio\\StoreCleanArtitecure\\Domain\\Store.Domain.csproj"
             }
