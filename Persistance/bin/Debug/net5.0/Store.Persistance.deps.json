@@ -1072,10 +1072,16 @@
       "Store.Application/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.17",
+          "Store.Common": "1.0.0",
           "Store.Domain": "1.0.0"
         },
         "runtime": {
           "Store.Application.dll": {}
+        }
+      },
+      "Store.Common/1.0.0": {
+        "runtime": {
+          "Store.Common.dll": {}
         }
       },
       "Store.Domain/1.0.0": {
@@ -1771,6 +1777,11 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "Store.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Store.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

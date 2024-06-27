@@ -156,3 +156,6 @@ D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\bin\Debug\net5.0\Store.Persis
 D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\bin\Debug\net5.0\Store.Application.pdb
 D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\bin\Debug\net5.0\Store.Persistance.pdb
 D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\bin\Debug\net5.0\Store.Domain.pdb
+D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\bin\Debug\net5.0\Store.Common.dll
+D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\bin\Debug\net5.0\Store.Common.pdb
+D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\obj\Debug\net5.0\Razor\Areas\Admin\Views\Users\Create.cshtml.g.cs

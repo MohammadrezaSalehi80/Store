@@ -6,6 +6,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Store.Application.Interfaces.Context;
+using Store.Application.Services.Users.Query.GetRoles;
+using Store.Application.Services.Users.Query.GetUsers;
 using Store.Persistance.Context;
 using System;
 using System.Collections.Generic;
@@ -27,6 +29,8 @@ namespace EndPoint.Site
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IDataBaseContext, DatabaseContext>();
+            services.AddScoped<IGetUsersServices, GetUsersServices>();
+            services.AddScoped<IGetRoles, GetRoles>();
             services.AddDbContext<DatabaseContext>(op =>
                 op.UseSqlServer(Configuration["Data:Store"]));
             services.AddControllersWithViews();

@@ -32,6 +32,23 @@ namespace Store.Persistance.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Roles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            Name = "Admin"
+                        },
+                        new
+                        {
+                            Id = 2L,
+                            Name = "Operator"
+                        },
+                        new
+                        {
+                            Id = 3L,
+                            Name = "Customer"
+                        });
                 });
 
             modelBuilder.Entity("Store.Domain.Entities.Users.UserRoles", b =>
