@@ -26,6 +26,10 @@ namespace Store.Persistance.Context
                 new Roles() { Id = 2, Name = "Operator" },
                 new Roles() { Id = 3, Name = "Customer" }
                 );
+
+
+            modelBuilder.Entity<Users>().HasQueryFilter(p => !p.IsRemoved);
+
         }
     }
 }

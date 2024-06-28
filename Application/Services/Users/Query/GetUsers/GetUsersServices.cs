@@ -16,6 +16,27 @@ namespace Store.Application.Services.Users.Query.GetUsers
         public ResultGetUsersDto Execute(RequestGetUsersDto request)
         {
             var user = _context.Users.AsQueryable();
+
+            if (request.Id != 0 && request.Id != null)
+            {
+                user = user.Where(p => p.Id == request.Id);
+
+                var res = user.Select(p => new GetUsersDto()
+                {
+                    Id = p.Id,
+                    Name = p.Name,
+                    Email= p.Email,
+                    Family = p.Family,
+                    UserName = p.UserName
+                }).ToList();
+
+                return new ResultGetUsersDto
+                {
+                    users = res,
+                    Rows = res.Count
+                };
+            }
+
             if (!string.IsNullOrWhiteSpace(request.SearchKey))
             {
 
@@ -29,6 +50,7 @@ namespace Store.Application.Services.Users.Query.GetUsers
             var result = user.ToPage(request.Page, 20, out rowsCount).Select(p =>
             new GetUsersDto
             {
+                Id = p.Id,
                 Email = p.Email,
                 Name = p.Name,
                 Family = p.Family

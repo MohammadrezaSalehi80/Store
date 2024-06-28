@@ -6,6 +6,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Store.Application.Interfaces.Context;
+using Store.Application.Services.Users.Command.Delete;
+using Store.Application.Services.Users.Command.Register;
 using Store.Application.Services.Users.Query.GetRoles;
 using Store.Application.Services.Users.Query.GetUsers;
 using Store.Persistance.Context;
@@ -31,6 +33,8 @@ namespace EndPoint.Site
             services.AddScoped<IDataBaseContext, DatabaseContext>();
             services.AddScoped<IGetUsersServices, GetUsersServices>();
             services.AddScoped<IGetRoles, GetRoles>();
+            services.AddScoped<IRegisterUsersServices, RegisterUsersServices>();
+            services.AddScoped<IDeleteUsersServices, DeleteUsersServices>();
             services.AddDbContext<DatabaseContext>(op =>
                 op.UseSqlServer(Configuration["Data:Store"]));
             services.AddControllersWithViews();

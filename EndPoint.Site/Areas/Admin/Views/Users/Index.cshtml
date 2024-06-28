@@ -45,11 +45,11 @@
                         <td>@mo.Family</td>
                         <td>@mo.Email</td>
                         <td>
-                            <a href="" class="item-delete mlg-15" title="حذف"></a>
+                            <a onclick="Remove('@mo.Id')" class=" btn item-delete mlg-15" title="حذف"></a>
                             <a href="" class="item-confirm mlg-15" title="تایید"></a>
                             <a href="" class="item-reject mlg-15" title="رد"></a>
                             <a href="edit-user.html" target="_blank" class="item-eye mlg-15" title="مشاهده"></a>
-                            <a href="edit-user.html" class="item-edit " title="ویرایش"></a>
+                            <a href="~/Admin/Users/Edit/?Id=@mo.Id" class="btn item-edit " title="ویرایش"></a>
                         </td>
                     </tr>
                 }
@@ -57,3 +57,54 @@
         </table>
     </div>
 </div>
+
+
+@section Script{
+    <link href="~/sweetalert2/sweetalert2.min.css" rel="stylesheet" />
+    <script src="~/sweetalert2/sweetalert2.min.js"></script>
+
+    <script>
+        function Remove(Id) {
+            swal.fire({
+                icon: "warning",
+                title: "حذف کاربر",
+                text: "آیا از حذف کاربر مطمئن هستید؟?",
+                showCancelButton: true,
+                confirmButtonColor: "#d61b44",
+                confirmButtonText: "بله",
+                cancelButtonText: "بازگشت"
+            }).then((result) => {
+                if (result.value) {
+
+                    var PostData = {
+                        'id': Id
+                    }
+
+                    $.ajax({
+                        type: 'json',
+                        url: "Remove",
+                        contentType: "application/x-www-form-urlencoded",
+                        data: PostData,
+                        success: function (msg) {
+                            if (msg.issuccess = true) {
+                                console.log("sucs");
+                                swal.fire({
+                                    title: msg.message,
+                                    icon: "success"
+                                });
+                            }
+                            else if (msg.issuccess == false) {
+                                console.log("no sucs");
+                                swal.fire({
+                                    title: msg.message,
+                                    icon: "error"
+                                });
+                            }
+                        }
+                    });
+                }
+            });
+        }
+    </script>
+
+}

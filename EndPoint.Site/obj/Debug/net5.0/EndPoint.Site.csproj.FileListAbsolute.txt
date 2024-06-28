@@ -159,3 +159,4 @@ D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\bin\Debug\net5.0\Store.Domain
 D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\bin\Debug\net5.0\Store.Common.dll
 D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\bin\Debug\net5.0\Store.Common.pdb
 D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\obj\Debug\net5.0\Razor\Areas\Admin\Views\Users\Create.cshtml.g.cs
+D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\obj\Debug\net5.0\Razor\Areas\Admin\Views\Users\Edit.cshtml.g.cs
