@@ -15,14 +15,14 @@
 
     <div class="d-flex flex-space-between item-center flex-wrap padding-30 border-radius-3 bg-white">
         <div class="t-header-search">
-            <form action="" onclick="event.preventDefault();">
-                <div class="t-header-searchbox font-size-13">
-                    <input type="text" class="text search-input__box font-size-13" placeholder="جستجوی کاربر">
-                    <div class="t-header-search-content " style="display: none;">
-                        <btutton class="btn btn-netcopy_net">جستجو</btutton>
-                    </div>
-                </div>
-            </form>
+
+            <div class="t-header-searchbox font-size-13">
+                <input id="searchKey" type="text" class="text search-input__box font-size-13" placeholder="جستجوی کاربر">
+
+                <a onclick="Search()" class="btn btn-netcopy_net">جستجو</a>
+
+            </div>
+
         </div>
     </div>
 
@@ -46,9 +46,6 @@
                         <td>@mo.Email</td>
                         <td>
                             <a onclick="Remove('@mo.Id')" class=" btn item-delete mlg-15" title="حذف"></a>
-                            <a href="" class="item-confirm mlg-15" title="تایید"></a>
-                            <a href="" class="item-reject mlg-15" title="رد"></a>
-                            <a href="edit-user.html" target="_blank" class="item-eye mlg-15" title="مشاهده"></a>
                             <a href="~/Admin/Users/Edit/?Id=@mo.Id" class="btn item-edit " title="ویرایش"></a>
                         </td>
                     </tr>
@@ -107,4 +104,9 @@
         }
     </script>
 
+    <script>
+        function Search() {
+            document.location.href = 'index?searchKey=' + $('#searchKey').val();
+        }
+    </script>
 }
