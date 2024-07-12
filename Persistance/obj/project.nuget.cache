@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "AasR8Vk92uunBk+2R/j1P1J0PK8565RhGPSxTL1bfbIzUnXN+csYvmUjk+dsGPX+ESsqD81Og9xO9I+mgymwZA==",
+  "dgSpecHash": "SwVbzUje2wdEpmDndFscSDs+7DiDQpcg29DWH4qwbwpOrDrnLeRWCYbDrSIwwrJrAZyGlzFlruYSycQpKWFI9w==",
   "success": true,
   "projectFilePath": "D:\\VisualStudio\\StoreCleanArtitecure\\Persistance\\Store.Persistance.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mahdis\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\mahdis\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.0\\microsoft.aspnetcore.cryptography.internal.5.0.0.nupkg.sha512",
+    "C:\\Users\\mahdis\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.0\\microsoft.aspnetcore.cryptography.keyderivation.5.0.0.nupkg.sha512",
     "C:\\Users\\mahdis\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\mahdis\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\mahdis\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",
