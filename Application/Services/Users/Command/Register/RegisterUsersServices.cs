@@ -1,5 +1,6 @@
 ﻿
 using Store.Application.Interfaces.Context;
+using Store.Common;
 using Store.Common.Dto;
 using Store.Domain.Entities.Users;
 using System;
@@ -42,12 +43,16 @@ namespace Store.Application.Services.Users.Command.Register
                     };
                 }
 
+                var passwordHasher = new PasswordHasher();
+                var Hash = passwordHasher.HashPassword(request.Password);
+
                 Entitiy.Users users = new Entitiy.Users
                 {
                     Email = request.Email,
                     Family = request.Family,
                     Name = request.Name,
-                    UserName = request.UserName
+                    UserName = request.UserName,
+                    Password = Hash,
                 };
 
                 Roles roles = new Roles();

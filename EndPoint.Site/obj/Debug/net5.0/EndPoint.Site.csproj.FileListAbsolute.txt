@@ -160,3 +160,5 @@ D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\bin\Debug\net5.0\Store.Common
 D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\bin\Debug\net5.0\Store.Common.pdb
 D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\obj\Debug\net5.0\Razor\Areas\Admin\Views\Users\Create.cshtml.g.cs
 D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\obj\Debug\net5.0\Razor\Areas\Admin\Views\Users\Edit.cshtml.g.cs
+D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\obj\Debug\net5.0\Razor\Views\Authentication\Signin.cshtml.g.cs
+D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\obj\Debug\net5.0\Razor\Views\Authentication\Signup.cshtml.g.cs

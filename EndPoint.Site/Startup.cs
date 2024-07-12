@@ -1,5 +1,7 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -10,6 +12,7 @@ using Store.Application.Services.Users.Command.Delete;
 using Store.Application.Services.Users.Command.Register;
 using Store.Application.Services.Users.Query.GetRoles;
 using Store.Application.Services.Users.Query.GetUsers;
+using Store.Application.Services.Users.Query.Login;
 using Store.Persistance.Context;
 using System;
 using System.Collections.Generic;
@@ -33,7 +36,19 @@ namespace EndPoint.Site
             services.AddScoped<IDataBaseContext, DatabaseContext>();
             services.AddScoped<IGetUsersServices, GetUsersServices>();
             services.AddScoped<IGetRoles, GetRoles>();
+            services.AddScoped<ILoginService, LoginServices>();
             services.AddScoped<IRegisterUsersServices, RegisterUsersServices>();
+            services.AddAuthentication(options =>
+            {
+                options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            }).AddCookie(option =>
+            {
+                option.LoginPath = new PathString("/");
+                option.ExpireTimeSpan= TimeSpan.FromMinutes(1);
+            });
+
             services.AddScoped<IDeleteUsersServices, DeleteUsersServices>();
             services.AddDbContext<DatabaseContext>(op =>
                 op.UseSqlServer(Configuration["Data:Store"]));
@@ -59,17 +74,17 @@ namespace EndPoint.Site
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseAuthentication();
             app.UseEndpoints(endpoints =>
                 {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    endpoints.MapControllerRoute(
+                        name: "default",
+                        pattern: "{controller=Home}/{action=Index}/{id?}");
 
-                endpoints.MapControllerRoute(
-                name: "areas",
-                pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
-            });
+                    endpoints.MapControllerRoute(
+                    name: "areas",
+                    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+                });
         }
     }
 }
