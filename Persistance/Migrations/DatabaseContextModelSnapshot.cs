@@ -19,6 +19,38 @@ namespace Store.Persistance.Migrations
                 .HasAnnotation("ProductVersion", "5.0.17")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("Store.Domain.Entities.Product.Category", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsRemoved")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long?>("ParentId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("RemoveDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ParentId");
+
+                    b.ToTable("Categories");
+                });
+
             modelBuilder.Entity("Store.Domain.Entities.Users.Roles", b =>
                 {
                     b.Property<long>("Id")
@@ -154,6 +186,15 @@ namespace Store.Persistance.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("Store.Domain.Entities.Product.Category", b =>
+                {
+                    b.HasOne("Store.Domain.Entities.Product.Category", "Parent")
+                        .WithMany("SubCatgory")
+                        .HasForeignKey("ParentId");
+
+                    b.Navigation("Parent");
+                });
+
             modelBuilder.Entity("Store.Domain.Entities.Users.UserRoles", b =>
                 {
                     b.HasOne("Store.Domain.Entities.Users.Roles", "Roles")
@@ -167,6 +208,11 @@ namespace Store.Persistance.Migrations
                     b.Navigation("Roles");
 
                     b.Navigation("Users");
+                });
+
+            modelBuilder.Entity("Store.Domain.Entities.Product.Category", b =>
+                {
+                    b.Navigation("SubCatgory");
                 });
 
             modelBuilder.Entity("Store.Domain.Entities.Users.Roles", b =>

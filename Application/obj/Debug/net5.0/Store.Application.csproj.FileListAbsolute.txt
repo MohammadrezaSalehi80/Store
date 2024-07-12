@@ -1,7 +1,9 @@
 D:\VisualStudio\StoreCleanArtitecure\Application\bin\Debug\net5.0\Store.Application.deps.json
 D:\VisualStudio\StoreCleanArtitecure\Application\bin\Debug\net5.0\Store.Application.dll
 D:\VisualStudio\StoreCleanArtitecure\Application\bin\Debug\net5.0\Store.Application.pdb
+D:\VisualStudio\StoreCleanArtitecure\Application\bin\Debug\net5.0\Store.Common.dll
 D:\VisualStudio\StoreCleanArtitecure\Application\bin\Debug\net5.0\Store.Domain.dll
+D:\VisualStudio\StoreCleanArtitecure\Application\bin\Debug\net5.0\Store.Common.pdb
 D:\VisualStudio\StoreCleanArtitecure\Application\bin\Debug\net5.0\Store.Domain.pdb
 D:\VisualStudio\StoreCleanArtitecure\Application\obj\Debug\net5.0\Store.Application.csproj.AssemblyReference.cache
 D:\VisualStudio\StoreCleanArtitecure\Application\obj\Debug\net5.0\Store.Application.GeneratedMSBuildEditorConfig.editorconfig
@@ -13,5 +15,3 @@ D:\VisualStudio\StoreCleanArtitecure\Application\obj\Debug\net5.0\Store.Applicat
 D:\VisualStudio\StoreCleanArtitecure\Application\obj\Debug\net5.0\refint\Store.Application.dll
 D:\VisualStudio\StoreCleanArtitecure\Application\obj\Debug\net5.0\Store.Application.pdb
 D:\VisualStudio\StoreCleanArtitecure\Application\obj\Debug\net5.0\ref\Store.Application.dll
-D:\VisualStudio\StoreCleanArtitecure\Application\bin\Debug\net5.0\Store.Common.dll
-D:\VisualStudio\StoreCleanArtitecure\Application\bin\Debug\net5.0\Store.Common.pdb
