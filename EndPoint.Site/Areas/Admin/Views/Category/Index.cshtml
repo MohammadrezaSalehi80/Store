@@ -1,0 +1,115 @@
+﻿@using Store.Application.Services.Product.Query;
+@model List<GetCategoryDto>;
+@{
+    ViewData["Title"] = "دسته بندی";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="main-content font-size-13">
+    <div class="tab__box">
+        <div class="tab__items">
+            <a class="tab__item is-active">دسته بندی ها</a>
+        </div>
+    </div>
+
+    <div class="d-flex flex-space-between item-center flex-wrap padding-30 border-radius-3 bg-white">
+
+        <a href="~/Admin/Category/Create" class="btn btn-netcopy_net">ایجاد دسته بندی جدید</a>
+
+    </div>
+
+
+    <div class="table__box">
+        <table class="table">
+            <thead role="rowgroup">
+                <tr role="row" class="title-row">
+                    <th> نام دسته بندی </th>
+                    <th>پدر </th>
+                    <th>عملیات</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var mo in Model)
+                {
+                    <tr role="row" class="odd">
+                        <td class="sorting_1">@mo.Name</td>
+                        <td>
+                            @{
+                                string parent = mo.parentCategoryDto != null ? mo.parentCategoryDto.Name.ToString() : "-";
+                            }
+                            <text>@parent</text>
+                        </td>
+                        <td>
+                            <a href="Create?ParentId=@mo.Id" class="btn btn-netcopy_net">افزودن زیر مجموعه</a>
+                            @*<a onclick="Remove('@mo.ParentId')" class=" btn item-delete mlg-15" title="حذف"></a>*@
+                            @*<a href="~/Admin/Users/Edit/?Id=@mo.ParentId" class="btn item-edit " title="ویرایش"></a>*@
+                            @{
+                                if (mo.hasChild)
+                                {
+                                    <a href="~/Admin/Category/Index?ParentId=@mo.Id" class="btn btn-netcopy_net">نمایش زیرمجموعه</a>
+                                }
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+@section Script{
+    <link href="~/sweetalert2/sweetalert2.min.css" rel="stylesheet" />
+    <script src="~/sweetalert2/sweetalert2.min.js"></script>
+
+    <script>
+        function Remove(Id) {
+            swal.fire({
+                icon: "warning",
+                title: "حذف کاربر",
+                text: "آیا از حذف کاربر مطمئن هستید؟?",
+                showCancelButton: true,
+                confirmButtonColor: "#d61b44",
+                confirmButtonText: "بله",
+                cancelButtonText: "بازگشت"
+            }).then((result) => {
+                if (result.value) {
+
+                    var PostData = {
+                        'id': Id
+                    }
+
+                    $.ajax({
+                        type: 'json',
+                        url: "Remove",
+                        contentType: "application/x-www-form-urlencoded",
+                        data: PostData,
+                        success: function (msg) {
+                            if (msg.issuccess = true) {
+                                console.log("sucs");
+                                swal.fire({
+                                    title: msg.message,
+                                    icon: "success"
+                                });
+                            }
+                            else if (msg.issuccess == false) {
+                                console.log("no sucs");
+                                swal.fire({
+                                    title: msg.message,
+                                    icon: "error"
+                                });
+                            }
+                        }
+                    });
+                }
+            });
+        }
+    </script>
+
+    <script>
+        function Search() {
+            document.location.href = 'index?searchKey=' + $('#searchKey').val();
+        }
+    </script>
+}

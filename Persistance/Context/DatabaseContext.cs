@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Store.Application.Interfaces.Context;
+using Store.Domain.Entities.Product;
 using Store.Domain.Entities.Users;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ namespace Store.Persistance.Context
         public DbSet<Users> Users { get; set; }
         public DbSet<Roles> Roles { get; set; }
         public DbSet<UserRoles> UserRoles { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
