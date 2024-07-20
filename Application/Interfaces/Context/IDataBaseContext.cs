@@ -16,6 +16,10 @@ namespace Store.Application.Interfaces.Context
         DbSet<Roles> Roles { get; set; }
         DbSet<UserRoles> UserRoles { get; set; }
         DbSet<Category> Categories { get; set; }
+        DbSet<Product> Products { get; set; }
+        DbSet<ProductFeature> ProductFeatures { get; set; }
+        DbSet<ProductImage> ProductImages { get; set; }
+
 
         Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess,
             CancellationToken cancellationToken = default(CancellationToken));

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Store.Application.Interfaces.FacadPattern;
-using Store.Application.Services.Product.Command;
+using Store.Application.Services.Product.Command.AddCategory;
 
 namespace EndPoint.Site.Areas.Admin.Controllers
 {

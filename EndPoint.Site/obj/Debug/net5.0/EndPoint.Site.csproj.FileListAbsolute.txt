@@ -164,3 +164,8 @@ D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\obj\Debug\net5.0\Razor\Views\
 D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\obj\Debug\net5.0\Razor\Views\Authentication\Signup.cshtml.g.cs
 D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\obj\Debug\net5.0\Razor\Areas\Admin\Views\Category\Index.cshtml.g.cs
 D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\obj\Debug\net5.0\Razor\Areas\Admin\Views\Category\Create.cshtml.g.cs
+D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Features.dll
+D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\bin\Debug\net5.0\System.IO.Pipelines.dll
+D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\obj\Debug\net5.0\Razor\Areas\Admin\Views\Product\Index.cshtml.g.cs
+D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\obj\Debug\net5.0\Razor\Areas\Admin\Views\Product\Create.cshtml.g.cs
