@@ -41,6 +41,8 @@ namespace EndPoint.Site
             services.AddScoped<ILoginService, LoginServices>();
             services.AddScoped<IRegisterUsersServices, RegisterUsersServices>();
             services.AddScoped<IProductFacad, ProductFacad>();
+
+            //AddAuthentication
             services.AddAuthentication(options =>
             {
                 options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
@@ -53,8 +55,11 @@ namespace EndPoint.Site
             });
 
             services.AddScoped<IDeleteUsersServices, DeleteUsersServices>();
+
+            //AddDbContext
             services.AddDbContext<DatabaseContext>(op =>
                 op.UseSqlServer(Configuration["Data:Store"]));
+
             services.AddControllersWithViews();
         }
 
