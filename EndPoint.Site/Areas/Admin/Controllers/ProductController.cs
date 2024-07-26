@@ -17,10 +17,21 @@ namespace EndPoint.Site.Areas.Admin.Controllers
             _productFacad = productFacad;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int page = 1, int pageSize = 20)
+
         {
+            var product = _productFacad.GetProductForAdmin.Execute(page, pageSize).Result;
+
+            return View(product);
+        }
+
+
+        public IActionResult Detail(long Id)
+        {
+            var productDetail = _productFacad.GetProductDetailForAdmin.Execute(Id).Result;
             return View();
         }
+
 
         public IActionResult Create()
         {
