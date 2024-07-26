@@ -169,3 +169,10 @@ D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\bin\Debug\net5.0\Microsoft.Ex
 D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\bin\Debug\net5.0\System.IO.Pipelines.dll
 D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\obj\Debug\net5.0\Razor\Areas\Admin\Views\Product\Index.cshtml.g.cs
 D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\obj\Debug\net5.0\Razor\Areas\Admin\Views\Product\Create.cshtml.g.cs
+D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\bin\Debug\net5.0\LazZiya.TagHelpers.dll
+D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\obj\Debug\net5.0\EndPoint.Site.MvcApplicationPartsAssemblyInfo.cs
