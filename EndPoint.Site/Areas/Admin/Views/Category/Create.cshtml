@@ -1,0 +1,84 @@
+﻿@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="main-content  ">
+    <div class="user-info bg-white padding-30 font-size-13">
+        <div id="RegisterForm">
+
+
+            <input type="hidden" class="text" id="parentid" value="@ViewBag.ParentId">
+            <input class="text" placeholder="نام دسته بندی" id="name">
+
+            <button onclick="Create()" type="button" class="btn btn-success">ذخیره تغییرات</button>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+@section Script
+    {
+    <link href="~/sweetalert2/sweetalert2.min.css" rel="stylesheet" />
+    <script src="~/sweetalert2/sweetalert2.min.js"></script>
+
+    <script>
+        function Create() {
+
+            Swal.fire
+                ({
+                    icon: "info",
+                    title: "ذخیره دسته بندی",
+                    text: "آیا از ذخیره اطلاعات مطمئن هستید?",
+                    showCancelButton: true,
+                    confirmButtonColor: "#24e54e",
+                    confirmButtonText: "ذخیره دسته بندی",
+                    cancelButtonText: "بازگشت"
+                }).then((result) => {
+
+                    if (result.value) {
+                        var Name = $('#name').val();
+                        var ParentId = $('#parentid').val();
+
+                        var postdData =
+                        {
+                            'name': Name,
+                            'parentid': ParentId,
+                        };
+
+                        $.ajax({
+                            type: "POST",
+                            url: "Create",
+                            data: postdData,
+                            contentType: "application/x-www-form-urlencoded",
+                            dataType: "json",
+                            success: function (msg) {
+                                if (msg.isSuccess) {
+                                    swal.fire({
+                                        icon: "success",
+                                        title: msg.message
+                                    }).then((result) => {
+                                        window.location.href = "Index";
+                                    })
+
+                                }
+                                else {
+                                    swal.fire({
+                                        title: msg.message,
+                                        icon: "error"
+                                    });
+                                }
+                            }
+                        });
+                    }
+                });
+        }
+    </script>
+
+}
+
+
