@@ -4,9 +4,11 @@ using Store.Application.Interfaces.Context;
 using Store.Application.Interfaces.FacadPattern;
 using Store.Application.Services.Product.Command.AddCategory;
 using Store.Application.Services.Product.Command.AddProduct;
+using Store.Application.Services.Product.Query.FetProductForSite;
 using Store.Application.Services.Product.Query.GetAllCategory;
 using Store.Application.Services.Product.Query.GetCategory;
 using Store.Application.Services.Product.Query.GetProductDetailForAdmin;
+using Store.Application.Services.Product.Query.GetProductDetailForSite;
 using Store.Application.Services.Product.Query.GetProductForAdmin;
 using System;
 using System.Collections.Generic;
@@ -27,7 +29,8 @@ namespace Store.Application.Services.Product.FacadPattern
         private GetAllCategoryServices _getAllCategory;
         private GetProductForAdmin _GetProductForAdmin;
         private GetProductDetailForAdmin _GetProductDetailForAdmin;
-
+        private FetProductForSiteServices _FetProductForSite;
+        private GetProductDetailForSiteServices _GetProductDetailForSite;
         public ProductFacad(IDataBaseContext dataBaseContext, IWebHostEnvironment webHostEnvironment)
         {
             _hostingEnvironment = webHostEnvironment;
@@ -46,9 +49,16 @@ namespace Store.Application.Services.Product.FacadPattern
         public GetAllCategoryServices GetAllCategoryServices => _getAllCategory ??
             new GetAllCategoryServices(_dataBaseContext);
 
-        public GetProductForAdmin GetProductForAdmin => _GetProductForAdmin ?? new GetProductForAdmin(_dataBaseContext);
+        public GetProductForAdmin GetProductForAdmin => _GetProductForAdmin ??
+            new GetProductForAdmin(_dataBaseContext);
 
         public GetProductDetailForAdmin GetProductDetailForAdmin => _GetProductDetailForAdmin ??
             new GetProductDetailForAdmin(_dataBaseContext);
+
+        public FetProductForSiteServices FetProductForSite => _FetProductForSite ??
+            new FetProductForSiteServices(_dataBaseContext);
+
+        public GetProductDetailForSiteServices GetProductDetailForSite => _GetProductDetailForSite ??
+            new GetProductDetailForSiteServices(_dataBaseContext);
     }
 }

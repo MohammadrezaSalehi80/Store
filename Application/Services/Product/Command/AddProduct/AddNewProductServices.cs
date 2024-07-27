@@ -101,7 +101,7 @@ namespace Store.Application.Services.Product.Command.AddProduct
                 Directory.CreateDirectory(root);
             }
 
-            string fileName = file.Name + DateTime.Now.Ticks.ToString();
+            string fileName = DateTime.Now.Ticks.ToString() + file.FileName;
             var filePath = Path.Combine(root, fileName);
             using (var fileStream = new FileStream(filePath, FileMode.Create))
             {
@@ -109,7 +109,7 @@ namespace Store.Application.Services.Product.Command.AddProduct
             }
             return new FileUploadDto()
             {
-                fileName = filePath,
+                fileName = folder+fileName,
                 IsSuccess = true,
             };
         }

@@ -176,3 +176,6 @@ D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\bin\Debug\net5.0\Microsoft.Do
 D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
 D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
 D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\obj\Debug\net5.0\EndPoint.Site.MvcApplicationPartsAssemblyInfo.cs
+D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\obj\Debug\net5.0\Razor\Views\Product\Index.cshtml.g.cs
+D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\obj\Debug\net5.0\Razor\Views\Product\Detail.cshtml.g.cs
+D:\VisualStudio\StoreCleanArtitecure\EndPoint.Site\obj\Debug\net5.0\Razor\Views\Shared\Components\GetMenuItem\GetMenuItem.cshtml.g.cs
