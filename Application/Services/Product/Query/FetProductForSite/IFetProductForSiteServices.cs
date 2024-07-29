@@ -8,6 +8,6 @@ namespace Store.Application.Services.Product.Query.FetProductForSite
 {
     public interface IFetProductForSiteServices
     {
-        public ResultDto<List<ProductForSiteDto>> Execute(int page, long? CatId);
+        public ResultDto<List<ProductForSiteDto>> Execute(int page, string SearchKey, long? CategoryId );
     }
 }
