@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Store.Application.Interfaces.Context;
 using Store.Application.Interfaces.FacadPattern;
+using Store.Application.Services.Common.GetCategory;
 using Store.Application.Services.Common.GetMenu;
 using Store.Application.Services.Product.FacadPattern;
 using Store.Application.Services.Users.Command.Delete;
@@ -43,6 +44,7 @@ namespace EndPoint.Site
             services.AddScoped<IRegisterUsersServices, RegisterUsersServices>();
             services.AddScoped<IProductFacad, ProductFacad>();
             services.AddScoped<IGetMenuServices, GetMenuServices>();
+            services.AddScoped<IGetCategoryForSearchServices, GetCategoryForSearchServices>();
 
             //AddAuthentication
             services.AddAuthentication(options =>
