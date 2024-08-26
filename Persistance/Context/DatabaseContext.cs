@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Store.Application.Interfaces.Context;
+using Store.Domain.Entities.Cart;
+using Store.Domain.Entities.HomePage;
 using Store.Domain.Entities.Product;
 using Store.Domain.Entities.Users;
 using System;
@@ -23,6 +25,9 @@ namespace Store.Persistance.Context
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductFeature> ProductFeatures { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
+        public DbSet<Slider> sliders { get; set; }
+        public DbSet<Cart> Carts { get; set; }
+        public DbSet<CartItem> CartItems { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

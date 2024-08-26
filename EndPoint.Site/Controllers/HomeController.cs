@@ -1,7 +1,10 @@
 ﻿using EndPoint.Site.Models;
+using EndPoint.Site.Views.ViewModel;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Store.Application.Services.HomePage.Query;
+using Store.Application.Services.Product.Query.GetAllCategory;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -14,18 +17,21 @@ namespace EndPoint.Site.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly IGetSliderServices _getSliderServices;
 
-
-        public HomeController(ILogger<HomeController> logger, IWebHostEnvironment webHostEnvironment)
+        public HomeController(ILogger<HomeController> logger,
+            IWebHostEnvironment webHostEnvironment, IGetSliderServices getSliderServices)
         {
             _logger = logger;
-            _webHostEnvironment= webHostEnvironment;
+            _webHostEnvironment = webHostEnvironment;
+            _getSliderServices = getSliderServices;
         }
 
         public IActionResult Index()
         {
-            var i = _webHostEnvironment;
-            return View();
+            var slider = _getSliderServices.Execute();
+            HomePageViewModel homePageViewModel = new HomePageViewModel() { Slider = slider.Result};
+            return View(homePageViewModel);
         }
 
         public IActionResult Privacy()

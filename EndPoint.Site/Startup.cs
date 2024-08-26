@@ -11,6 +11,8 @@ using Store.Application.Interfaces.Context;
 using Store.Application.Interfaces.FacadPattern;
 using Store.Application.Services.Common.GetCategory;
 using Store.Application.Services.Common.GetMenu;
+using Store.Application.Services.HomePage;
+using Store.Application.Services.HomePage.Query;
 using Store.Application.Services.Product.FacadPattern;
 using Store.Application.Services.Users.Command.Delete;
 using Store.Application.Services.Users.Command.Register;
@@ -45,6 +47,8 @@ namespace EndPoint.Site
             services.AddScoped<IProductFacad, ProductFacad>();
             services.AddScoped<IGetMenuServices, GetMenuServices>();
             services.AddScoped<IGetCategoryForSearchServices, GetCategoryForSearchServices>();
+            services.AddScoped<IAddNewSliderServices, AddNewSliderServices>();
+            services.AddScoped<IGetSliderServices, GetSliderServices>();
 
             //AddAuthentication
             services.AddAuthentication(options =>

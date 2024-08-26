@@ -1,0 +1,16 @@
+﻿using Store.Domain.Entities.Common;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Store.Domain.Entities.HomePage
+{
+    public class Slider : BaseEntity
+    {
+        public int Id { get; set; }
+        public string Link { get; set; }
+        public string ImageSrc { get; set; }
+    }
+}

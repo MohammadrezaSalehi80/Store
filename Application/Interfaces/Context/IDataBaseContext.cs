@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Store.Domain.Entities.Cart;
+using Store.Domain.Entities.HomePage;
 using Store.Domain.Entities.Product;
 using Store.Domain.Entities.Users;
 using System;
@@ -19,6 +21,9 @@ namespace Store.Application.Interfaces.Context
         DbSet<Product> Products { get; set; }
         DbSet<ProductFeature> ProductFeatures { get; set; }
         DbSet<ProductImage> ProductImages { get; set; }
+        DbSet<Slider> sliders { get; set; }
+        DbSet<Cart> Carts { get; set; }
+        DbSet<CartItem> CartItems { get; set; }
 
 
         Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess,
